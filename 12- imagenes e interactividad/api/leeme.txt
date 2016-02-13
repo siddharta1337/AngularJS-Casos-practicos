@@ -1,0 +1,20 @@
+Descarga un servidor local en:
+https://www.apachefriends.org/es/index.html
+
+Incluye los archivos del folder api en la carpeta "htdocs"
+
+
+Debes actualizar los datos de acceso segun tu configuración
+
+
+Inicializa el servidor y si realizaste correctamente los pasos, tendrás accesso a estos datos en 
+http://localhost/api
+
+
+Si tienes dudas con respecto a la configuracion del servidor puedes encontrar ayuda en los foros de XAMPP
+
+https://community.apachefriends.org/f/
+
+El código PHP que se incluye aca es solo un ejemplo básico y no debe ser usado para producción sin antes pasar por una auditoría de seguridad. Si deseas aprender mas sobre PHP puedes encontrar documentacion en :
+
+http://php.net/manual/es/

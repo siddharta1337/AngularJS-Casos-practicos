@@ -1,0 +1,22 @@
+<h1>Lista de empleados</h1>
+ 
+
+<div class="lista-empleados">
+    
+    <div ng-repeat="empleado in empleados" >
+        
+        
+        <div class="col-sm-2">
+            <img class="img-square" ng-src="{{config.carpeta_imagenes +  empleado.imagen}}"/>
+        </div>
+        
+        <div class="col-sm-10">
+            <h3>{{empleado.nombre}}</h3>
+            <small>{{empleado.descripcion}}</small>
+        </div>
+    
+    
+    </div>
+
+
+</div>

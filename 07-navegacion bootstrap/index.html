@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    
+    <script src="app.js"> </script>
+    
+    <script src="controladores/inicio.js"></script>
+    <script src="controladores/navegacionControl.js"></script>
+    
+    
+</head>
+
+<body ng-app='navegacion'>
+
+    <header class="navbar navbar-default" ng-controller="navegacionControl">
+
+
+        <div class="container">
+
+
+            <nav role="navigation" id="navegacion" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active : esActivo('/') }">
+                        <a href="#/">Inicio</a>
+                    </li>
+                    <li ng-class="{ active : esActivo('/galeria') }">
+                        <a href="#/galeria">Galería</a>
+                    </li>
+                    <li ng-class="{ active : esActivo('/mapa') }">
+                        <a href="#/mapa">Mapa</a>
+                    </li>
+                    <li ng-class="{ active : esActivo('/contacto') }">
+                        <a href="#/contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    
+    <div class="container" ng-view >
+    
+    </div>
+    
+</body>

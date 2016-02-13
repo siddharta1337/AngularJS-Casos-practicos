@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="holamundo" >
+    <head>
+        
+        <meta charset="utf-8">
+        <title>AngularJS</title>        
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" type="text/css"  href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+        
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        
+         
+    </head>
+
+    <body>
+    
+      <h1>  {{ "Mi Aplicación AngularJS # " + (1+1) | uppercase }} </h1>
+    
+    <script>
+        var miAppAngular = angular.module( 'holamundo', [] );
+        
+    </script>  
+    </body>
+
+</html>

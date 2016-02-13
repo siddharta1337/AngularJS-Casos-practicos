@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app='pizza'>
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container" ng-controller="pizzaOnline">
+
+        <h1> Pizza Online </h1> 
+
+        <div class="col-sm-10">
+
+            <form id="formulario" name="formulario" ng-submit="ordenarPizza()" novalidate ng-hide="pizzaOk">
+
+                <label>Nombre</label>
+                <input type="text" name="nombre" class="form-control" ng-model="orden.nombre" required />
+                
+                <div ng-show="!orden.nombre && formulario.$submitted "  class="alert alert-warning">
+                Debes rellenar esta casilla
+                </div>
+                
+                  
+
+                <label>Email</label>
+                <input type="text" name="email" class="form-control" ng-model="orden.email"/>
+                
+                <div class="alert alert-warning"   ng-show="formulario.$submitted && !orden.email">
+                    Debes rellenar esta casilla
+                </div>
+
+
+                
+                <label>¿Cuántas pizzas deseas? {{orden.cantidad}}</label>
+                <input type="range" name="cantidad" ng-model="orden.cantidad" min="1" max="10" step="1" />
+                
+                <div class="alert alert-warning"   ng-show="orden.cantidad<3">
+                    Mínimo 3 pizzas
+                </div>
+                
+                
+
+
+                
+                
+
+                <br>
+                <input class="btn" type="submit"  value="Ordenar" />
+
+
+            </form>
+
+
+             <div ng-show="pizzaOk" class="well">
+
+                <h3>¡ Sale una orden de pizza !</h3>
+
+                <h4>{{orden.cantidad}} pizzas para {{orden.nombre}} ({{orden.email}}) </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var miAppAngular = angular.module('pizza', []);
+        
+        miAppAngular.controller('pizzaOnline', function($scope){ 
+                
+            $scope.orden = {cantidad:5};
+            
+            
+              $scope.ordenarPizza = function(){
+                      if($scope.formulario.$valid){
+                          $scope.pizzaOk = true;
+                      }
+             }
+        
+        })
+
+        
+        
+    </script>
+</body>

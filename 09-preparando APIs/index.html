@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="app.js">
+    </script>
+
+    <script src="controladores/inicio.js"></script>
+    <script src="controladores/detalles.js"></script>
+
+
+</head>
+
+<body ng-app='navegacion'>
+
+    <header class="navbar navbar-default">
+
+
+        <div class="container">
+
+
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#/">Corporación Rajuela</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container" ng-view>
+
+    </div>
+
+</body>

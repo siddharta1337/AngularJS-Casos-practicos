@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='ocultar'>
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css"  href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+     
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h1 ng-bind=" 'Resultado:' + (1+1)   " ng-cloak class="ng-cloak" >  cargando ....</h1>
+    </div>
+    
+ 
+    <script>
+        var miAppAngular = angular.module('ocultar',[]);
+    </script>
+</body>
